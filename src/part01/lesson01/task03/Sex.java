@@ -1,4 +1,4 @@
-package Task3;
+package part01.lesson01.task03;
 /*
     Класс пола который хранит поле sex(пол) и может выбросить
     исключение UnknownSexException, если неправильно введён пол

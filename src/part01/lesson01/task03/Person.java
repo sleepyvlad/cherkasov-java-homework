@@ -1,4 +1,4 @@
-package Task3;
+package part01.lesson01.task03;
 /*
     Класс человека с полями age - вораст, sex - пол, name - имя
 * */

@@ -1,4 +1,4 @@
-package Task3;
+package part01.lesson01.task03;
 
 public class CoincidenceException extends Exception {
     private String name;
