@@ -8,11 +8,8 @@ import java.util.Scanner;
 
 public class Task2 {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        System.out.println("Input N");
-        int n = input.nextInt();
-        System.out.println("Input K");
-        int k = input.nextInt();
+        int n = 55;
+        int k = 2;
         Random rand = new Random();
 
         try {
