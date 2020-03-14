@@ -7,16 +7,16 @@ import java.util.Iterator;
 /*
     Класс коллекция объектов Object
 * */
-public class ObjectBox {
-    private HashSet<Object> objects = new HashSet<Object>();
+public class ObjectBox<T> {
+    private HashSet<T> objects = new HashSet<T>();
 
     // Конструктор ObjectBox получает на вход массив и раскладывает на коллекцию HashSet
     public ObjectBox(Object[] obj) {
-        this.objects = new HashSet<Object>(Arrays.asList(obj));
+        this.objects = (HashSet<T>) new HashSet<Object>(Arrays.asList(obj));
     }
 
     // Добавляет объект в коллекцию
-    public void addObject (Object obj) throws ObjectToMathBoxException {
+    public void addObject (T obj) throws ObjectToMathBoxException {
         this.objects.add(obj);
     }
 
@@ -29,7 +29,7 @@ public class ObjectBox {
 
     // Выводит в строку объекты коллекции
     public void dump () {
-        Iterator<Object> it = this.objects.iterator();
+        Iterator<T> it = this.objects.iterator();
         String allObjects = "";
         while (it.hasNext()) {
             allObjects = allObjects.concat(it.next().toString() + "\n");
