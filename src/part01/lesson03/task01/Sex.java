@@ -1,4 +1,4 @@
-package part01.lesson01.task03;
+package part01.lesson03.task01;
 /*
     Класс пола который хранит поле sex(пол) и может выбросить
     исключение UnknownSexException, если неправильно введён пол
@@ -37,6 +37,23 @@ public class Sex {
             System.out.println("Input WOMAN OR MAN");
             throw e;
         }
+    }
+
+    public int compareTo(Sex otherSex) {
+        if (this.sex.equals(otherSex.getSex())) {
+           return 0;
+        } else if(this.sex.equals("MAN") && otherSex.getSex().equals("WOMAN")) {
+            return 1;
+        } else {
+            return -1;
+        }
+    }
+
+    @Override
+    public String toString() {
+        return "Sex{" +
+                "sex='" + sex + '\'' +
+                '}';
     }
 }
 
